@@ -18,3 +18,23 @@ View your app in AI Studio: https://ai.studio/apps/drive/1ToBdZ0020OdGZF62PTdmIa
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Run locally
+
+```sh
+npm install
+cp .env.example .env.local   # then fill in the values
+npm run dev
+```
+
+## Production build
+
+```sh
+npm run build     # outputs static files to dist/
+npm run preview   # serves dist/ locally to check the build
+```
+
+Deploy the `dist/` folder to any static host (Vercel, Netlify, Cloudflare Pages, Render static site).
+
+Optional environment variable: `GEMINI_API_KEY` (not used by the current code). See `.env.example`.
+
